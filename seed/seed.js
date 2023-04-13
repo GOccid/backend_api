@@ -7,7 +7,7 @@ const insertData = async () => {
   // Reset Database
   await db.dropDatabase();
   
-  await rimor.insertMany(rickmorty);
+  await rimor.insertMany(rickmorty.results);
 
   db.close();
 };

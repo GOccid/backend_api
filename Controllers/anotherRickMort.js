@@ -12,7 +12,7 @@ export const getrMorts = async (req, res) => {
 
 export const getrMort = async (req, res) => {
   try {
-    const character = await rMort.findOne({name: `${req.params.id}`});
+    const character = await rMort.findById(req.params.id);
     res.json(character);
   } catch (error) {
     console.log(error.message);

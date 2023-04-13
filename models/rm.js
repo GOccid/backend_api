@@ -1,16 +1,18 @@
 import mongoose from "mongoose";
-
 const Schema = mongoose.Schema
 
-let resultsRickMort = new Schema({
-      "name": String,
-      "status": String,
-      "species": String,
-})
+// let resultsRickMort = new Schema({
+//       "name": String,
+//       "status": String,
+//       "species": String,
+//       "image": String
+// })
 
 let rickAndMort = new Schema({
-  "results": [resultsRickMort]
-
+  "name": String,
+  "status": String,
+  "species": String,
+  "image": String
 })
 
 export default mongoose.model("rickAndMort", rickAndMort);
